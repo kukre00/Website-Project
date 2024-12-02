@@ -235,15 +235,22 @@ section h2 {
 }
 
 /* Grid Layout */
-.dept{
-    animation: faded linear;
-    animation-timeline: view();
-    animaation-range: entry 0;
-
+@keyframes slidin_appear{
+    from{
+        margin-left: 100%;
+        opacity: 5;
+    }
+    to{
+        margin-left: 0%;
+        opacity: 100;
+    }
 }
 
 .depty .grid{
     background-color: #FFF8DC;
+    animation: slidein_appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
 }
 
 .depty h2{
@@ -315,18 +322,6 @@ footer .facebook-link {
 
 footer .facebook-link:hover {
     color:#FFD700;
-}
-
-@keyframes faded {
-    from{
-        margin-left: 100;
-        opacity: 5;
-    }
-    to{
-        margin-left: 0;
-        opacity: 100;
-    }
-    
 }
 
 /* Mobile View */
