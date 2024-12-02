@@ -1,0 +1,381 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between picture and text */
+}
+
+/* Picture Container */
+.picture-container {
+    width: 30px; /* Match size of previous icon */
+    height: 30px;
+    border-radius: 50%; /* Circular container */
+    overflow: hidden; /* Crop the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills the container */
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 24px; /* Keep text size consistent */
+    font-weight: bold;
+    color: #FFD700; /* Yellow for consistency */
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #FFD700; /* Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFA500; /* Orange */
+}
+
+/* Dropdown Menu */
+.dropdown > a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown i {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+/* Rotate arrow when hovered */
+.dropdown:hover i {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    color: #FFA500; /* Orange */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Background Section */
+.background-section {
+    text-align: center;
+    margin: 20px 0;
+    background: linear-gradient(to right, #FFA500, #FFDAB9, #FFA500);
+}
+
+.background-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Research Output Section */
+.research-output {
+    text-align: center;
+    padding: 20px;
+}
+
+.research-output h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Grid Layout for Images */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center;
+    padding: 10px;
+}
+
+.grid-layout p{
+    font-weight: bold;
+}
+
+.grid-layout img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures images are cropped properly */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.grid-layout img:hover {
+    transform: scale(1.05); /* Adds a hover zoom effect */
+}
+
+/* Publications and Documents Section */
+.publications-documents {
+    padding: 20px;
+    text-align: left;
+    animation: slidein linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+    
+}
+
+.publications-documents h2{
+    background: linear-gradient(to right, #FFA500, #FFDAB9, #FFA500);
+}
+
+.publications-documents h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.publications-documents ul {
+    list-style: disc inside;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+/* Technology Innovation Section */
+.tech-innovation {
+    text-align: center;
+    padding: 20px;
+}
+
+.tech-innovation h2{
+    background: linear-gradient(to right, #FFA500, #FFDAB9, #FFA500);
+}
+
+.grid-layout-lengthwise {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    animation: faded linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.grid-layout-lengthwise img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: -110px;
+    width: 100%;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+footer .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;  /* Spacing between icons */
+    font-size: 1rem;
+}
+
+footer .icons i {
+    font-family: "Font Awesome 5 Free", "FontAwesome", Arial; /* Explicitly set the Font Awesome font */
+    font-weight: 900;  /* Ensure solid style is applied */
+    font-size: 20px;
+    transition: color 0.3s ease;  /* Smooth transition on hover */
+}
+
+footer .facebook-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .facebook-link:hover {
+    color:#FFD700;
+}
+
+@keyframes faded{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+    
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    footer .icons {
+        flex-direction: column;  /* Stack icons vertically on smaller screens */
+        gap: 10px;  /* Reduced gap between icons */
+    }
+
+    footer h2 {
+        font-size: 1.2rem;  /* Adjust font size for smaller screens */
+    }
+
+    footer .icons i {
+        font-size: 1.5rem;  /* Increase icon size for mobile */
+    }
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+        text-align: right; /* Align links to the right */
+        color: #FFD700;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Fix dropdown visibility */
+    .dropdown-content {
+        position: static; /* Ensure dropdown is inside the flow */
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        position: relative;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 2px;
+        margin: 3px 0;
+        background-color: #FFD700;
+    }
+
+    .grid-layout-lengthwise {
+        display: block; /* Switch to block to stack vertically */
+    }
+
+    .grid-layout-lengthwise img {
+        width: 50%; /* Ensure images take full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 15px; /* Space between images */
+}
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+
